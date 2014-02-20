@@ -11,6 +11,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | Name       | Provides                            | Extra information                         |
 | ---        | ---                                 | ---                                       |
 | clojure    | lein latest stable version          | includes java role                        |
+| elixir     | 0.11.2                              | includes latest erlang                    |
 | erlang     | latest from erlang-solutions.com    |                                           |
 | go         | 1.2.0                               |                                           |
 | gradle     | 1.9                                 | Includes java role                        |
