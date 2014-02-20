@@ -1,15 +1,15 @@
 kickstart.context "java"
 
-install_java() {
+baseline.java.install.java() {
   kickstart.apt.ppa ppa:webupd8team/java
   echo debconf shared/accepted-oracle-license-v1-1 select true | kickstart.mute debconf-set-selections
   echo debconf shared/accepted-oracle-license-v1-1 seen true | kickstart.mute debconf-set-selections
   kickstart.package.install oracle-java7-installer
 }
 
-install_maven() {
-  maven_basename='apache-maven-3.1.1'
-  maven_url="http://www.apache.org/dist/maven/maven-3/3.1.1/binaries/${maven_basename}-bin.tar.gz"
+baseline.java.install.maven() {
+  local maven_basename='apache-maven-3.1.1'
+  local maven_url="http://www.apache.org/dist/maven/maven-3/3.1.1/binaries/${maven_basename}-bin.tar.gz"
 
   (
   cd /opt
@@ -21,9 +21,9 @@ install_maven() {
 }
 
 
-install_ant() {
-  ant_basename='apache-ant-1.9.3'
-  ant_url="http://www.apache.org/dist/ant/binaries/${ant_basename}-bin.tar.gz"
+baseline.java.install.ant() {
+  local ant_basename='apache-ant-1.9.3'
+  local ant_url="http://www.apache.org/dist/ant/binaries/${ant_basename}-bin.tar.gz"
   (
   cd /opt
   [ -d $ant_basename ] || kickstart.download.stream $ant_url | /bin/tar xz
@@ -33,6 +33,6 @@ install_ant() {
   kickstart.add_to_profile.d ant.sh
 }
 
-install_java
-install_maven
-install_ant
+baseline.java.install.java
+baseline.java.install.maven
+baseline.java.install.ant
