@@ -10,6 +10,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 
 | Name       | Provides                            | Extra information                         |
 | ---        | ---                                 | ---                                       |
+| groovy     | 2.2.1                               | Includes java role                        |
 | java       | 7 + maven 3.1.1 + ant 1.9.3         |                                           |
 | nodejs     | latest from ppa:chris.lea           |                                           |
 | redis      | from ppa:chris.lea                  | *port:* 6379                              |
