@@ -1,3 +1,5 @@
+kickstart.info "Setting up python"
+
 if [ `kickstart.os` == "Ubuntu" ]; then
   kickstart.package.install python-dev python-pip
 

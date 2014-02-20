@@ -1,3 +1,5 @@
+kickstart.info "Setting up io"
+
 io_dest=iobin-linux-x64-deb-current.zip
 
 (

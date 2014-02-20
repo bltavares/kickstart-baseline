@@ -1,3 +1,5 @@
+kickstart.info "Setting up redis"
+
 if [ `kickstart.os` == "Ubuntu" ]; then
   kickstart.apt.ppa ppa:chris-lea/redis-server
   kickstart.package.install redis-server

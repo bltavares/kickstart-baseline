@@ -1,3 +1,5 @@
+kickstart.info "Setting up java"
+
 install_java() {
   kickstart.apt.ppa ppa:webupd8team/java
   echo debconf shared/accepted-oracle-license-v1-1 select true | kickstart.mute debconf-set-selections

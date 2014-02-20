@@ -1,3 +1,5 @@
+kickstart.info "Setting up nodejs"
+
 if [ `kickstart.os` == "Ubuntu" ]; then
   kickstart.apt.ppa ppa:chris-lea/node.js
   kickstart.package.install nodejs
