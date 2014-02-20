@@ -3,7 +3,7 @@ kickstart.context Ubuntu
 
 export DEBIAN_FRONTEND=noninteractive
 
-kickstart.apt.upgrade
+kickstart.package.upgrade
 kickstart.package.install software-properties-common python-software-properties
 
 baseline.ubuntu.add_universe_package_source() {
@@ -13,7 +13,7 @@ baseline.ubuntu.add_universe_package_source() {
   kickstart.info "Check for presence of universe or add it"
   grep -q "$code_name universe" /etc/apt/sources.list || ( echo deb http://archive.ubuntu.com/ubuntu $code_name universe >> /etc/apt/sources.list )
 
-  kickstart.apt.update
-  kickstart.apt.upgrade
+  kickstart.package.update
+  kickstart.package.upgrade
 }
 baseline.ubuntu.add_universe_package_source
