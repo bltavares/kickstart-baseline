@@ -30,4 +30,5 @@ On `files` is the files that will be copied and modified sometimes on the target
 | rust       | 0.8                                 |                                           |
 | scala      | 2.10.3 + sbt 0.13.0                 | Includes java role                        |
 | sml        | smlnj 110.76                        |                                           |
+| zeromq     | 4.0.3                               |                                           |
 
