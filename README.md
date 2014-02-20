@@ -27,4 +27,5 @@ On `files` is the files that will be copied and modified sometimes on the target
 | redis      | from ppa:chris.lea                  | *port:* 6379                              |
 | ruby       | chruby + ruby 2.0                   |                                           |
 | ruby193    | chruby + ruby 1.9.3                 |                                           |
+| rust       | 0.8                                 |                                           |
 
