@@ -1,3 +1,4 @@
+! kickstart.os.is "Ubuntu" && return
 kickstart.context "java"
 
 baseline.java.install.java() {
