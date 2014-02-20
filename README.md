@@ -15,6 +15,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | io         | Latest io deb from io website       |                                           |
 | java       | 7 + maven 3.1.1 + ant 1.9.3         |                                           |
 | lua        | 5.2 + luarocks                      |                                           |
+| mongo      | latest from 10\_gen repo            | *port:* 27017                             |
 | nodejs     | latest from ppa:chris.lea           |                                           |
 | redis      | from ppa:chris.lea                  | *port:* 6379                              |
 | ruby       | chruby + ruby 2.0                   |                                           |
