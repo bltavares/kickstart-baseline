@@ -12,3 +12,4 @@ baseline.mac.install.homebrew() {
 kickstart.command_exists brew || baseline.mac.install.homebrew
 kickstart.package.update
 kickstart.package.upgrade
+kickstart.info "brew command outputs will be suppressed. Check \"brew info <package_name>\" for caveats"
