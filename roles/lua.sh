@@ -2,15 +2,14 @@ source recipes/gcc.sh
 source recipes/checkinstall.sh
 kickstart.context "lua"
 
-luarocks_basename='luarocks-2.0.12'
-luarocks_tarball="${luarocks_basename}.tar.gz"
-luarocks_url="http://luarocks.org/releases/${luarocks_tarball}"
-
-install_lua() {
+baseline.lua.install.lua() {
   kickstart.package.install lua5.2 liblua5.2-dev
 }
 
-install_luarocks() {
+baseline.lua.install.luarocks() {
+  local luarocks_basename='luarocks-2.0.12'
+  local luarocks_tarball="${luarocks_basename}.tar.gz"
+  local luarocks_url="http://luarocks.org/releases/${luarocks_tarball}"
   (
     cd /opt
     [ -d $luarocks_basename ] || kickstart.download.stream $luarocks_url | tar xz
@@ -21,5 +20,5 @@ install_luarocks() {
   )
 }
 
-install_lua
-[ `which luarocks` ] || install_luarocks
+baseline.lua.install.lua
+[ `which luarocks` ] || baseline.lua.install.luarocks
