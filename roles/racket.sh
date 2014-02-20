@@ -1,4 +1,4 @@
-kickstart.info "Setting up sml"
+kickstart.context "sml"
 
 racket_dest=racket_install.sh
 

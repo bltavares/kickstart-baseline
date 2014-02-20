@@ -1,4 +1,4 @@
-kickstart.info "Setting up sml"
+kickstart.context "sml"
 
 source recipes/gcc.sh
 kickstart.package.install gcc-multilib g++-multilib

@@ -1,6 +1,6 @@
 source recipes/checkinstall.sh
 source recipes/gcc.sh
-kickstart.info "Setting up ruby-install"
+kickstart.context "ruby-install"
 
 install_ruby_install() {
   (

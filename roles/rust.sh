@@ -1,4 +1,4 @@
-kickstart.info "Setting up rust"
+kickstart.context "rust"
 
 rust_dest=rust_0.8-1_amd64.deb
 rust_md5='7f2e19bc5cde47e143b7484ecda0207f'

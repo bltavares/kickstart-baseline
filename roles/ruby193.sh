@@ -1,4 +1,4 @@
-kickstart.info "Setting up ruby 1.9.3"
+kickstart.context "ruby 1.9.3"
 
 source recipes/ruby.sh
 kickstart.mute 'ruby-install --no-reinstall ruby 1.9.3'

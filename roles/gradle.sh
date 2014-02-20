@@ -1,5 +1,5 @@
 source roles/java.sh
-kickstart.info "Setting up gradle"
+kickstart.context "gradle"
 
 gradle_basename='gradle-1.9'
 kickstart.package.install unzip

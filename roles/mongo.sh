@@ -1,4 +1,4 @@
-kickstart.info "Setting up mongo"
+kickstart.context "mongo"
 
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list
 kickstart.apt.add_key_from_keychain 7F0CEB10

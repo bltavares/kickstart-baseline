@@ -1,4 +1,4 @@
-kickstart.info "Setting up redis"
+kickstart.context "redis"
 
 if [ `kickstart.os` == "Ubuntu" ]; then
   kickstart.apt.ppa ppa:chris-lea/redis-server

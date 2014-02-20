@@ -1,4 +1,5 @@
 [[ `kickstart.os` != "Ubuntu" ]] && return 0
+kickstart.context Ubuntu
 
 export DEBIAN_FRONTEND=noninteractive
 

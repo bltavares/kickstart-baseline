@@ -1,5 +1,5 @@
 source roles/erlang.sh
-kickstart.info "Setting up elixir"
+kickstart.context "elixir"
 
 elixir_tarball='v0.11.2.zip'
 kickstart.package.install unzip

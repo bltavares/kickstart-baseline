@@ -1,4 +1,4 @@
-kickstart.info "Setting up lua"
+kickstart.context "lua"
 
 source recipes/gcc.sh
 source recipes/checkinstall.sh

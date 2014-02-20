@@ -1,4 +1,4 @@
-kickstart.info "Setting up java"
+kickstart.context "java"
 
 install_java() {
   kickstart.apt.ppa ppa:webupd8team/java

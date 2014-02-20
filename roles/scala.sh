@@ -1,4 +1,4 @@
-kickstart.info "Setting up scala"
+kickstart.context "scala"
 
 source roles/java.sh
 

@@ -1,4 +1,4 @@
-kickstart.info "Setting up postgresql"
+kickstart.context "postgresql"
 
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 kickstart.apt.add_key_from_url https://www.postgresql.org/media/keys/ACCC4CF8.asc

@@ -1,4 +1,4 @@
-kickstart.info "Setting up io"
+kickstart.context "io"
 
 io_dest=iobin-linux-x64-deb-current.zip
 

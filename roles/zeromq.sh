@@ -1,4 +1,4 @@
-kickstart.info "Setting up zeromq"
+kickstart.context "zeromq"
 
 kickstart.package.install autoconf automake uuid-dev libtool
 

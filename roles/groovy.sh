@@ -1,5 +1,5 @@
 source roles/java.sh
-kickstart.info "Setting up groovy"
+kickstart.context "groovy"
 
 groovy_basename='groovy-2.2.1'
 groovy_tarball="${groovy_basename}.zip"
