@@ -12,6 +12,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | ---        | ---                                 | ---                                       |
 | clojure    | lein latest stable version          | includes java role                        |
 | groovy     | 2.2.1                               | Includes java role                        |
+| haskell    | haskell-platform from ubuntu's repo |                                           |
 | io         | Latest io deb from io website       |                                           |
 | java       | 7 + maven 3.1.1 + ant 1.9.3         |                                           |
 | lua        | 5.2 + luarocks                      |                                           |
