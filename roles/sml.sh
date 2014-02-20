@@ -7,6 +7,6 @@ mkdir -p /opt/sml
 (
   cd /opt/sml
   [ -d config ] || kickstart.download.stream http://www.smlnj.org/dist/working/110.74/config.tgz | tar xz
-  [ `which sml` ] || kickstart.mute config/install.sh
+  kickstart.command_exists sml || kickstart.mute config/install.sh
 )
 kickstart.add_to_profile.d sml.sh

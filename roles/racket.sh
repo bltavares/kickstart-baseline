@@ -14,7 +14,7 @@ baseline.racket.install() {
   (
   cd /opt
   baseline.racket.check_integrity || kickstart.download.file http://download.racket-lang.org/installers/5.92/racket-5.92-x86_64-linux-ubuntu-quantal.sh $racket_dest
-  [ `which racket` ] || baseline.racket.install.racket
+  kickstart.command_exists racket || baseline.racket.install.racket
   )
   kickstart.add_to_profile.d racket.sh
 }

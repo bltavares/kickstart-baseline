@@ -21,4 +21,4 @@ baseline.lua.install.luarocks() {
 }
 
 baseline.lua.install.lua
-[ `which luarocks` ] || baseline.lua.install.luarocks
+kickstart.command_exists luarocks || baseline.lua.install.luarocks
