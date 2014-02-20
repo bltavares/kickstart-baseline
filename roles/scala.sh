@@ -1,6 +1,5 @@
-kickstart.context "scala"
-
 source roles/java.sh
+kickstart.context "scala"
 
 install_scala() {
   scala_basename='scala-2.10.3'

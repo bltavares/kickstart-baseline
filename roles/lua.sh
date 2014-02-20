@@ -1,7 +1,6 @@
-kickstart.context "lua"
-
 source recipes/gcc.sh
 source recipes/checkinstall.sh
+kickstart.context "lua"
 
 luarocks_basename='luarocks-2.0.12'
 luarocks_tarball="${luarocks_basename}.tar.gz"
