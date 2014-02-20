@@ -26,6 +26,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | postgresql | 9.3 + devel package                 | *username:* postgres *password:* postgres |
 | prolog     | latest from ppa:swi-prolog/stable   |                                           |
 | python     | 2.7 + pip and virtualenv            |                                           |
+| rabbitmq   | latest from official apt repo       | *port:* 5672                              |
 | redis      | from ppa:chris.lea                  | *port:* 6379                              |
 | ruby       | chruby + ruby 2.0                   |                                           |
 | ruby193    | chruby + ruby 1.9.3                 |                                           |
