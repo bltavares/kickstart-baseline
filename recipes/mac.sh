@@ -1,6 +1,8 @@
 [[ `kickstart.os` != "Mac" ]] && return 0
 kickstart.context Mac
 
+[ `whoami` = root ] && kickstart.info "Refusing to run as root on Mac" && exit 1
+
 baseline.mac.install.homebrew() {
   kickstart.info "Installing brew"
   export PATH=/usr/local/bin:$PATH
