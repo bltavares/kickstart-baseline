@@ -1,3 +1,2 @@
 kickstart.context "checkinstall"
-
-kickstart.package.install checkinstall
+kickstart.os.is "Ubuntu" && kickstart.package.install checkinstall

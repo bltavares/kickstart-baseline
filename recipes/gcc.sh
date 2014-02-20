@@ -1,5 +1,3 @@
 kickstart.context "gcc"
 
-if [ `kickstart.os` == "Ubuntu" ]; then
-  kickstart.package.install gcc build-essential
-fi
+kickstart.os.is "Ubuntu" && kickstart.package.install gcc build-essential

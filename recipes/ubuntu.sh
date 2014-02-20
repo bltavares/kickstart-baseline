@@ -1,4 +1,4 @@
-[[ `kickstart.os` != "Ubuntu" ]] && return 0
+! kickstart.os.is "Ubuntu" && return
 kickstart.context Ubuntu
 
 export DEBIAN_FRONTEND=noninteractive
