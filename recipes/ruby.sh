@@ -2,7 +2,7 @@ source recipes/checkinstall.sh
 source recipes/gcc.sh
 kickstart.context "ruby-install"
 
-install_ruby_install() {
+baseline.ruby-install.install() {
   (
   cd /opt
   [ -d ruby-install-0.4.0 ] || kickstart.download.stream https://github.com/postmodern/ruby-install/archive/v0.4.0.tar.gz | tar xz
@@ -11,7 +11,7 @@ install_ruby_install() {
   )
 }
 
-install_chruby() {
+baseline.chruby.install() {
   (
   cd /opt
   [ -d chruby-0.3.8 ] || kickstart.download.stream https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz | tar xz
@@ -20,6 +20,6 @@ install_chruby() {
   )
 }
 
-install_ruby_install
-install_chruby
+baseline.ruby-install.install
+baseline.chruby.install
 kickstart.path.add_to_profile.d ruby.sh
