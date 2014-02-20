@@ -1,0 +1,1 @@
+kickstart.package.install checkinstall

@@ -6,3 +6,10 @@ On `recipes` you will find scripts that are shared among some different roles, l
 On `roles` you will find the scripts to setup the different environments that baseline provides.
 On `files` is the files that will be copied and modified sometimes on the target.
 
+### Current environments
+
+| Name       | Provides                            | Extra information                         |
+| ---        | ---                                 | ---                                       |
+| ruby       | chruby + ruby 2.0                   |                                           |
+| ruby193    | chruby + ruby 1.9.3                 |                                           |
+
