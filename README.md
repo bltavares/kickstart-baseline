@@ -11,6 +11,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | Name       | Provides                            | Extra information                         |
 | ---        | ---                                 | ---                                       |
 | clojure    | lein latest stable version          | includes java role                        |
+| go         | 1.2.0                               |                                           |
 | gradle     | 1.9                                 | Includes java role                        |
 | groovy     | 2.2.1                               | Includes java role                        |
 | haskell    | haskell-platform from ubuntu's repo |                                           |
