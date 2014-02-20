@@ -10,4 +10,6 @@ baseline.mac.install.homebrew() {
 }
 
 kickstart.command_exists brew || baseline.mac.install.homebrew
+kickstart.package.update
+kickstart.package.upgrade
 kickstart.info "We only support installing brew so far" && exit 0
