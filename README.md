@@ -28,4 +28,5 @@ On `files` is the files that will be copied and modified sometimes on the target
 | ruby       | chruby + ruby 2.0                   |                                           |
 | ruby193    | chruby + ruby 1.9.3                 |                                           |
 | rust       | 0.8                                 |                                           |
+| scala      | 2.10.3 + sbt 0.13.0                 | Includes java role                        |
 
