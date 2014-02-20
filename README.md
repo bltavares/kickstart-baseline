@@ -24,6 +24,7 @@ On `files` is the files that will be copied and modified sometimes on the target
 | mongo      | latest from 10\_gen repo            | *port:* 27017                             |
 | nodejs     | latest from ppa:chris.lea           |                                           |
 | postgresql | 9.3 + devel package                 | *username:* postgres *password:* postgres |
+| prolog     | latest from ppa:swi-prolog/stable   |                                           |
 | redis      | from ppa:chris.lea                  | *port:* 6379                              |
 | ruby       | chruby + ruby 2.0                   |                                           |
 | ruby193    | chruby + ruby 1.9.3                 |                                           |
