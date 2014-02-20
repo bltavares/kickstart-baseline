@@ -22,4 +22,4 @@ baseline.chruby.install() {
 
 baseline.ruby-install.install
 baseline.chruby.install
-kickstart.path.add_to_profile.d ruby.sh
+kickstart.add_to_profile.d ruby.sh

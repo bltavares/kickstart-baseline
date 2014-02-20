@@ -17,7 +17,7 @@ install_maven() {
   rm -rf maven 2> /dev/null
   ln -s $maven_basename maven
   )
-  kickstart.path.add_to_profile.d maven.sh
+  kickstart.add_to_profile.d maven.sh
 }
 
 
@@ -30,7 +30,7 @@ install_ant() {
   rm -rf ant 2> /dev/null
   ln -s $ant_basename ant
   )
-  kickstart.path.add_to_profile.d ant.sh
+  kickstart.add_to_profile.d ant.sh
 }
 
 install_java

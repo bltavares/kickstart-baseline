@@ -11,4 +11,4 @@ kickstart.mute "unzip -o ${gradle_basename}.zip"
 rm -rf gradle 2> /dev/null
 ln -s $gradle_basename gradle
 )
-kickstart.path.add_to_profile.d gradle.sh
+kickstart.add_to_profile.d gradle.sh

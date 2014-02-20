@@ -9,7 +9,7 @@ install_scala() {
   rm -rf scala 2> /dev/null
   ln -s $scala_basename scala
   )
-  kickstart.path.add_to_profile.d scala.sh
+  kickstart.add_to_profile.d scala.sh
 }
 
 install_sbt() {

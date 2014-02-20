@@ -8,4 +8,4 @@ download_go() {
   cd /opt
   [ -d go ] || download_go
 )
-kickstart.path.add_to_profile.d go.sh
+kickstart.add_to_profile.d go.sh

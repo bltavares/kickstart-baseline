@@ -9,4 +9,4 @@ kickstart.package.install unzip
   [ -f $elixir_tarball ] || kickstart.download.file "https://github.com/elixir-lang/elixir/releases/download/v0.11.2/${elixir_tarball}" $elixir_tarball
   kickstart.mute "unzip -o $elixir_tarball -d elixir"
 )
-kickstart.path.add_to_profile.d elixir.sh
+kickstart.add_to_profile.d elixir.sh
