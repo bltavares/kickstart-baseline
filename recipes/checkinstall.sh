@@ -1,3 +1,4 @@
+! kickstart.os.is Ubuntu && return
 kickstart.context checkinstall
 
-kickstart.os.is Ubuntu && kickstart.package.install checkinstall
+kickstart.package.install checkinstall

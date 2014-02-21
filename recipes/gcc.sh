@@ -1,3 +1,4 @@
+! kickstart.os.is Ubuntu && return
 kickstart.context gcc
 
-kickstart.os.is Ubuntu && kickstart.package.install gcc build-essential
+kickstart.package.install gcc build-essential
