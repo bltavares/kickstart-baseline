@@ -1,7 +1,7 @@
 source roles/java.sh
 kickstart.context "scala"
 
-install_scala() {
+baseline.scala.install.scala.Ubuntu() {
   scala_basename='scala-2.10.3'
   (
   cd /opt
@@ -12,7 +12,11 @@ install_scala() {
   kickstart.add_to_profile.d scala.sh
 }
 
-install_sbt() {
+baseline.scala.install.scala.Mac() {
+  kickstart.package.install scala
+}
+
+baseline.scala.install.sbt.Ubuntu() {
   (
   cd /opt
   [ -f sbt.deb ] || kickstart.download.file http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.13.0/sbt.deb sbt.deb
@@ -20,5 +24,9 @@ install_sbt() {
   )
 }
 
-install_scala
-install_sbt
+baseline.scala.install.sbt.Mac() {
+  kickstart.package.install sbt
+}
+
+baseline.scala.install.scala.`kickstart.os`
+baseline.scala.install.sbt.`kickstart.os`
