@@ -1,7 +1,7 @@
 source roles/erlang.sh
 kickstart.context "elixir"
 
-baseline.elixir.install() {
+baseline.elixir.install.Ubuntu() {
   local elixir_tarball='v0.11.2.zip'
   kickstart.package.install unzip
 
@@ -12,4 +12,9 @@ baseline.elixir.install() {
   )
   kickstart.add_to_profile.d elixir.sh
 }
-baseline.elixir.install
+
+baseline.elixir.install.Mac() {
+  kickstart.package.install elixir
+}
+
+baseline.elixir.install.`kickstart.os`
