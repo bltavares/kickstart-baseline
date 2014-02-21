@@ -1,6 +1,6 @@
 kickstart.context "racket"
 
-baseline.racket.install() {
+baseline.racket.install.Ubuntu() {
   local racket_dest=racket_install.sh
 
   baseline.racket.check_integrity() {
@@ -18,4 +18,9 @@ baseline.racket.install() {
   )
   kickstart.add_to_profile.d racket.sh
 }
-baseline.racket.install
+
+baseline.racket.install.Mac() {
+  kickstart.package.install plt-racket
+}
+
+baseline.racket.install.`kickstart.os`
