@@ -1,7 +1,7 @@
 source roles/java.sh
 kickstart.context "gradle"
 
-baseline.gradle.install() {
+baseline.gradle.install.Ubuntu() {
   local gradle_basename='gradle-1.9'
   kickstart.package.install unzip
 
@@ -14,4 +14,9 @@ baseline.gradle.install() {
   )
   kickstart.add_to_profile.d gradle.sh
 }
-baseline.gradle.install
+
+baseline.gradle.install.Mac() {
+  kickstart.package.install gradle
+}
+
+baseline.gradle.install.`kickstart.os`
