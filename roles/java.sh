@@ -14,8 +14,7 @@ baseline.java.install.maven.Ubuntu() {
   (
   cd /opt
   [ -d $maven_basename ] || kickstart.download.stream $maven_url | /bin/tar xz
-  rm -rf maven 2> /dev/null
-  ln -s $maven_basename maven
+  kickstart.file.link $maven_basename maven
   )
   kickstart.profile.add_to_profile maven.sh
 }
@@ -30,8 +29,7 @@ baseline.java.install.ant.Ubuntu() {
   (
   cd /opt
   [ -d $ant_basename ] || kickstart.download.stream $ant_url | /bin/tar xz
-  rm -rf ant 2> /dev/null
-  ln -s $ant_basename ant
+  kickstart.file.link $ant_basename ant
   )
   kickstart.profile.add_to_profile ant.sh
 }

@@ -6,8 +6,7 @@ baseline.scala.install.scala.Ubuntu() {
   (
   cd /opt
   [ -d $scala_basename ] || kickstart.download.stream "http://www.scala-lang.org/files/archive/${scala_basename}.tgz" | tar xz
-  rm -rf scala 2> /dev/null
-  ln -s $scala_basename scala
+  kickstart.file.link $scala_basename scala
   )
   kickstart.profile.add_to_profile scala.sh
 }
