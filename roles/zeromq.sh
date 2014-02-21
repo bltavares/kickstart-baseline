@@ -1,8 +1,9 @@
+source recipes/gcc.sh
+source recipes/checkinstall.sh
 kickstart.context "zeromq"
 
-kickstart.package.install autoconf automake uuid-dev libtool
-
-baseline.zeromq.install() {
+baseline.zeromq.install.Ubuntu() {
+  kickstart.package.install autoconf automake uuid-dev libtool
   local zeromq_basename='zeromq-4.0.3'
   (
   cd /opt
@@ -15,4 +16,9 @@ baseline.zeromq.install() {
   ldconfig
   )
 }
-baseline.zeromq.install
+
+baseline.zeromq.install.Mac() {
+  kickstart.package.install zeromq
+}
+
+baseline.zeromq.install.`kickstart.os`
