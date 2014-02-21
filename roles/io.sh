@@ -1,6 +1,6 @@
 kickstart.context "io"
 
-baseline.io.install() {
+baseline.io.install.Ubuntu() {
   local io_dest=iobin-linux-x64-deb-current.zip
 
   (
@@ -11,4 +11,9 @@ baseline.io.install() {
   dpkg -i io_lang_current/*.deb
   )
 }
-baseline.io.install
+
+baseline.io.install.Mac() {
+  kickstart.package.install io
+}
+
+baseline.io.install.`kickstart.os`
