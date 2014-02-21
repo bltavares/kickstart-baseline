@@ -1,4 +1,4 @@
-kickstart.context "rust"
+kickstart.context rust
 
 baseline.rust.install.Ubuntu() {
   rust_dest=rust_0.8-1_amd64.deb

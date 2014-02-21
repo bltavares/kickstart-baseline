@@ -1,5 +1,5 @@
 source recipes/gcc.sh
-kickstart.context "sml"
+kickstart.context sml
 
 baseline.sml.install.Ubuntu() {
   kickstart.package.install gcc-multilib g++-multilib

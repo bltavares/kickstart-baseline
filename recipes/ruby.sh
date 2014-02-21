@@ -1,6 +1,6 @@
 source recipes/checkinstall.sh
 source recipes/gcc.sh
-kickstart.context "ruby-install"
+kickstart.context ruby-install
 
 baseline.ruby-install.install() {
   (

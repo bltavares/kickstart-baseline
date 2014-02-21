@@ -1,4 +1,4 @@
-kickstart.context "python"
+kickstart.context python
 
 baseline.python.packages() {
   kickstart.os.is Ubuntu && echo python-dev python-pip

@@ -1,4 +1,4 @@
-kickstart.context "rabbitmq"
+kickstart.context rabbitmq
 
 kickstart.rabbitmq.install.Ubuntu() {
   echo 'deb http://www.rabbitmq.com/debian/ stable main' > /etc/apt/sources.list.d/rabbitmq.list

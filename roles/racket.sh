@@ -1,4 +1,4 @@
-kickstart.context "racket"
+kickstart.context racket
 
 baseline.racket.install.Ubuntu() {
   local racket_dest=racket_install.sh

@@ -1,4 +1,4 @@
-kickstart.context "io"
+kickstart.context io
 
 baseline.io.install.Ubuntu() {
   local io_dest=iobin-linux-x64-deb-current.zip

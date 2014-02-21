@@ -1,4 +1,4 @@
-kickstart.context "go"
+kickstart.context go
 
 baseline.go.install.Ubuntu() {
   baseline.go.download() {

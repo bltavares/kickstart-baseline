@@ -1,4 +1,4 @@
-! kickstart.os.is "Mac" && return
+! kickstart.os.is Mac && return
 kickstart.context Mac
 
 [ `whoami` = root ] && kickstart.info "Refusing to run as root on Mac" && exit 1

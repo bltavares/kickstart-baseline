@@ -1,10 +1,10 @@
 source recipes/gcc.sh
 source recipes/checkinstall.sh
-kickstart.context "lua"
+kickstart.context lua
 
 baseline.lua.packages() {
-  kickstart.os.is "Ubuntu" && echo lua5.2 liblua5.2-dev
-  kickstart.os.is "Mac" && echo lua52 luarocks --with-lua52
+  kickstart.os.is Ubuntu && echo lua5.2 liblua5.2-dev
+  kickstart.os.is Mac && echo lua52 luarocks --with-lua52
 }
 
 baseline.lua.install.lua() {
@@ -26,4 +26,4 @@ baseline.lua.install.luarocks.ubuntu() {
 }
 
 baseline.lua.install.lua
-! kickstart.command_exists luarocks && kickstart.os.is "Ubuntu" &&  baseline.lua.install.luarocks
+! kickstart.command_exists luarocks && kickstart.os.is Ubuntu && baseline.lua.install.luarocks

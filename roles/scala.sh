@@ -1,5 +1,5 @@
 source roles/java.sh
-kickstart.context "scala"
+kickstart.context scala
 
 baseline.scala.install.scala.Ubuntu() {
   scala_basename='scala-2.10.3'

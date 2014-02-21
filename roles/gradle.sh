@@ -1,5 +1,5 @@
 source roles/java.sh
-kickstart.context "gradle"
+kickstart.context gradle
 
 baseline.gradle.install.Ubuntu() {
   local gradle_basename='gradle-1.9'

@@ -1,5 +1,5 @@
 source roles/erlang.sh
-kickstart.context "elixir"
+kickstart.context elixir
 
 baseline.elixir.install.Ubuntu() {
   local elixir_tarball='v0.11.2.zip'

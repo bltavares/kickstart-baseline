@@ -1,4 +1,4 @@
-kickstart.context "erlang"
+kickstart.context erlang
 
 baseline.erlang.install.Ubuntu() {
   echo 'deb http://binaries.erlang-solutions.com/debian precise contrib' > /etc/apt/sources.list.d/erlang.list

@@ -1,4 +1,4 @@
-kickstart.context "redis"
+kickstart.context redis
 
 baseline.redis.install.Ubuntu() {
   kickstart.apt.ppa ppa:chris-lea/redis-server

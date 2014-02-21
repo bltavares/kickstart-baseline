@@ -1,4 +1,4 @@
-kickstart.context "tools"
+kickstart.context tools
 
 baseline.tools.packages() {
   kickstart.os.is Ubuntu && echo git-core exuberant-ctags aptitude

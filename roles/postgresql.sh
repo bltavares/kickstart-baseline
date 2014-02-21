@@ -1,4 +1,4 @@
-kickstart.context "postgresql"
+kickstart.context postgresql
 
 kickstart.postgresql.install.Ubuntu() {
   echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list

@@ -1,6 +1,6 @@
 source recipes/gcc.sh
 source recipes/checkinstall.sh
-kickstart.context "zeromq"
+kickstart.context zeromq
 
 baseline.zeromq.install.Ubuntu() {
   kickstart.package.install autoconf automake uuid-dev libtool

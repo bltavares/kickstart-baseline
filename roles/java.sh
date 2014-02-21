@@ -1,5 +1,5 @@
-! kickstart.os.is "Ubuntu" && return
-kickstart.context "java"
+! kickstart.os.is Ubuntu && return
+kickstart.context java
 
 baseline.java.install.java() {
   kickstart.apt.ppa ppa:webupd8team/java

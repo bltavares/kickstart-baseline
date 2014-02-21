@@ -1,5 +1,5 @@
 source roles/java.sh
-kickstart.context "groovy"
+kickstart.context groovy
 
 baseline.groovy.install.Ubuntu() {
   local groovy_basename='groovy-2.2.1'
