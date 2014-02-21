@@ -1,6 +1,8 @@
 ! kickstart.os.is Ubuntu && return
 kickstart.context Ubuntu
 
+[ `whoami` != root ] && kickstart.info "Refusing to run as non-root on Ubuntu. Connect as root or use --sudo" && exit 1
+
 export DEBIAN_FRONTEND=noninteractive
 
 kickstart.package.update
