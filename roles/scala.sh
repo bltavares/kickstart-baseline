@@ -9,7 +9,7 @@ baseline.scala.install.scala.Ubuntu() {
   rm -rf scala 2> /dev/null
   ln -s $scala_basename scala
   )
-  kickstart.add_to_profile.d scala.sh
+  kickstart.profile.add_to_profile scala.sh
 }
 
 baseline.scala.install.scala.Mac() {

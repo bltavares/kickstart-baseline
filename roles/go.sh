@@ -9,7 +9,7 @@ baseline.go.install.Ubuntu() {
   cd /opt
   [ -d go ] || baseline.go.download
   )
-  kickstart.add_to_profile.d go.sh
+  kickstart.profile.add_to_profile go.sh
 }
 
 baseline.go.install.Mac() {

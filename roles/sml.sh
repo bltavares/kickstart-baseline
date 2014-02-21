@@ -10,7 +10,7 @@ baseline.sml.install.Ubuntu() {
   [ -d config ] || kickstart.download.stream http://www.smlnj.org/dist/working/110.74/config.tgz | tar xz
   kickstart.command_exists sml || kickstart.mute config/install.sh
   )
-  kickstart.add_to_profile.d sml.sh
+  kickstart.profile.add_to_profile sml.sh
 }
 
 baseline.sml.install.Mac() {

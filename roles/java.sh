@@ -18,7 +18,7 @@ baseline.java.install.maven() {
   rm -rf maven 2> /dev/null
   ln -s $maven_basename maven
   )
-  kickstart.add_to_profile.d maven.sh
+  kickstart.profile.add_to_profile maven.sh
 }
 
 
@@ -31,7 +31,7 @@ baseline.java.install.ant() {
   rm -rf ant 2> /dev/null
   ln -s $ant_basename ant
   )
-  kickstart.add_to_profile.d ant.sh
+  kickstart.profile.add_to_profile ant.sh
 }
 
 baseline.java.install.java

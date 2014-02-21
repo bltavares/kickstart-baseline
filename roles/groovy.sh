@@ -14,7 +14,7 @@ baseline.groovy.install.Ubuntu() {
   rm -rf groovy 2> /dev/null
   ln -s $groovy_basename groovy
   )
-  kickstart.add_to_profile.d groovy.sh
+  kickstart.profile.add_to_profile groovy.sh
 }
 
 baseline.groovy.install.Mac() {

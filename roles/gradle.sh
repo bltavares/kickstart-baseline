@@ -12,7 +12,7 @@ baseline.gradle.install.Ubuntu() {
   rm -rf gradle 2> /dev/null
   ln -s $gradle_basename gradle
   )
-  kickstart.add_to_profile.d gradle.sh
+  kickstart.profile.add_to_profile gradle.sh
 }
 
 baseline.gradle.install.Mac() {
