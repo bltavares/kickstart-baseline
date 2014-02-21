@@ -3,6 +3,7 @@ kickstart.context Ubuntu
 
 export DEBIAN_FRONTEND=noninteractive
 
+kickstart.package.update
 kickstart.package.upgrade
 kickstart.package.install software-properties-common python-software-properties
 
