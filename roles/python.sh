@@ -1,11 +1,14 @@
 kickstart.context "python"
 
-if [ `kickstart.os` == "Ubuntu" ]; then
-  kickstart.package.install python-dev python-pip
+baseline.python.packages() {
+  kickstart.os.is Ubuntu && echo python-dev python-pip
+  kickstart.os.is Mac && echo python
+}
 
-  if [ `which pip` == "/usr/bin/pip" ]; then 
-    kickstart.mute "pip install --upgrade pip"
-  fi
+kickstart.package.install `baseline.python.packages`
 
-  kickstart.mute  "pip install --upgrade pip virtualenv"
+if [ `which pip` == "/usr/bin/pip" ]; then 
+  kickstart.mute "pip install --upgrade pip"
 fi
+
+kickstart.mute  "pip install --upgrade pip virtualenv"
