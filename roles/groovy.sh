@@ -1,7 +1,7 @@
 source roles/java.sh
 kickstart.context "groovy"
 
-baseline.groovy.install() {
+baseline.groovy.install.Ubuntu() {
   local groovy_basename='groovy-2.2.1'
   local groovy_tarball="${groovy_basename}.zip"
 
@@ -16,4 +16,9 @@ baseline.groovy.install() {
   )
   kickstart.add_to_profile.d groovy.sh
 }
-baseline.groovy.install
+
+baseline.groovy.install.Mac() {
+  kickstart.package.install groovy
+}
+
+baseline.groovy.install.`kickstart.os`
