@@ -29,7 +29,7 @@ baseline.chruby.install.Mac() {
 }
 
 baseline.chruby.configuration() {
-  echo `kickstart.profile.profile.d.location`/`kickstart.os`_ruby.sh
+  echo `kickstart.profile.location.profile_d`/`kickstart.os`_ruby.sh
 }
 
 baseline.ruby_install.install.`kickstart.os`
