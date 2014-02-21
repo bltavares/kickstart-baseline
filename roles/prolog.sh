@@ -1,4 +1,4 @@
 kickstart.context "prolog"
 
-kickstart.apt.ppa ppa:swi-prolog/stable
+kickstart.os.is Ubuntu && kickstart.apt.ppa ppa:swi-prolog/stable
 kickstart.package.install swi-prolog
