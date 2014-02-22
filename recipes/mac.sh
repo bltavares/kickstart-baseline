@@ -6,7 +6,7 @@ kickstart.context Mac
 baseline.mac.install.homebrew() {
   kickstart.info "Installing brew"
   export PATH=/usr/local/bin:$PATH
-  kickstart.mute 'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 }
 
 kickstart.command_exists brew || baseline.mac.install.homebrew
