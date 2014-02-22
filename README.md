@@ -1,4 +1,6 @@
 ## kickstart-baseline
+Bash installation script for developer environments
+
 This is a rewrite of the Puppet recipes from [vagrant-baseline](https://github.com/bltavares/vagrant-baseline) to be used with [kickstart](https://github.com/bltavares/kickstart).
 It uses some utilities from kickstart, and it is the only requirement that prevents those bash scripts from running standalone on any machine.
 
