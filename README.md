@@ -65,6 +65,10 @@ The environments are basically using the homebrew versions provided.
 * Docker
 * Mac
 
+### Caveates
+
+* vagrant role should be passed before docker to put vagrant user into docker group.
+
 ### Example outputs
 
 ```bash

@@ -7,4 +7,4 @@ kickstart.package.update
 kickstart.package.install lxc-docker
 
 kickstart.group.create docker
-kickstart.user.add_group `whoami` docker
+kickstart.user.add_group ${baseline_docker_user:-`whoami`} docker
