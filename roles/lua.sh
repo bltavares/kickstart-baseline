@@ -19,9 +19,9 @@ baseline.lua.install.luarocks.Ubuntu() {
   cd /opt
   [ -d $luarocks_basename ] || kickstart.download.stream $luarocks_url | tar xz
   cd $luarocks_basename && \
-    kickstart.mute './configure --with-lua-include=/usr/include/lua5.2' && \
+    kickstart.mute ./configure --with-lua-include=/usr/include/lua5.2 && \
     kickstart.mute make && \
-    kickstart.mute 'checkinstall -D'
+    kickstart.mute checkinstall -D
   )
 }
 

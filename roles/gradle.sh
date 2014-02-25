@@ -8,7 +8,7 @@ baseline.gradle.install.Ubuntu() {
   (
   cd /opt
   kickstart.download.file "http://services.gradle.org/distributions/${gradle_basename}-bin.zip" "${gradle_basename}.zip"
-  kickstart.mute "unzip -o ${gradle_basename}.zip"
+  kickstart.mute unzip -o ${gradle_basename}.zip
   kickstart.file.link $gradle_basename gradle
   )
   kickstart.profile.add_to_profile gradle.sh

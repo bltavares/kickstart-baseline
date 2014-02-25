@@ -8,7 +8,7 @@ baseline.racket.install.Ubuntu() {
   }
 
   baseline.racket.install.racket() {
-    echo -e "no\\n4\\n\\n" | kickstart.mute "sh $racket_dest"
+    echo -e "no\\n4\\n\\n" | kickstart.mute sh $racket_dest
   }
 
   (

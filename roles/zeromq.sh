@@ -12,7 +12,7 @@ baseline.zeromq.install.Ubuntu() {
     cd $zeromq_basename && \
     kickstart.mute ./configure && \
     kickstart.mute make && \
-    kickstart.mute 'checkinstall -D'
+    kickstart.mute checkinstall -D
   ldconfig
   )
 }

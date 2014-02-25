@@ -19,7 +19,7 @@ baseline.scala.install.sbt.Ubuntu() {
   (
   cd /opt
   [ -f sbt.deb ] || kickstart.download.file http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.13.0/sbt.deb sbt.deb
-  kickstart.mute 'dpkg -i sbt.deb'
+  kickstart.mute dpkg -i sbt.deb
   )
 }
 

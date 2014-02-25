@@ -7,7 +7,7 @@ baseline.ruby_install.install.Ubuntu() {
   cd /opt
   [ -d ruby-install-0.4.0 ] || kickstart.download.stream https://github.com/postmodern/ruby-install/archive/v0.4.0.tar.gz | tar xz
   cd ruby-install-0.4.0
-  kickstart.mute 'checkinstall -D'
+  kickstart.mute checkinstall -D
   )
 }
 
@@ -20,7 +20,7 @@ baseline.chruby.install.Ubuntu() {
   cd /opt
   [ -d chruby-0.3.8 ] || kickstart.download.stream https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz | tar xz
   cd chruby-0.3.8
-  kickstart.mute 'checkinstall -D'
+  kickstart.mute checkinstall -D
   )
 }
 

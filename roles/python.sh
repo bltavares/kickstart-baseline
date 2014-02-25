@@ -8,7 +8,7 @@ baseline.python.packages() {
 kickstart.package.install `baseline.python.packages`
 
 if [ `which pip` == "/usr/bin/pip" ]; then 
-  kickstart.mute "pip install --upgrade pip"
+  kickstart.mute pip install --upgrade pip
 fi
 
-kickstart.mute  "pip install --upgrade pip virtualenv"
+kickstart.mute pip install --upgrade pip virtualenv

@@ -8,7 +8,7 @@ baseline.elixir.install.Ubuntu() {
   (
   cd /opt
   [ -f $elixir_tarball ] || kickstart.download.file "https://github.com/elixir-lang/elixir/releases/download/v0.11.2/${elixir_tarball}" $elixir_tarball
-  kickstart.mute "unzip -o $elixir_tarball -d elixir"
+  kickstart.mute unzip -o $elixir_tarball -d elixir
   )
   kickstart.profile.add_to_profile elixir.sh
 }
