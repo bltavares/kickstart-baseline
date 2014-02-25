@@ -11,7 +11,7 @@ baseline.lua.install.lua() {
   kickstart.package.install `baseline.lua.packages`
 }
 
-baseline.lua.install.luarocks.ubuntu() {
+baseline.lua.install.luarocks.Ubuntu() {
   local luarocks_basename='luarocks-2.0.12'
   local luarocks_tarball="${luarocks_basename}.tar.gz"
   local luarocks_url="http://luarocks.org/releases/${luarocks_tarball}"
@@ -26,4 +26,4 @@ baseline.lua.install.luarocks.ubuntu() {
 }
 
 baseline.lua.install.lua
-! kickstart.command_exists luarocks && kickstart.os.is Ubuntu && baseline.lua.install.luarocks
+! kickstart.command_exists luarocks && kickstart.os.is Ubuntu && baseline.lua.install.luarocks.Ubuntu
