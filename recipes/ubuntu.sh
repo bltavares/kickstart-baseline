@@ -10,7 +10,7 @@ kickstart.package.upgrade
 kickstart.package.install software-properties-common python-software-properties
 
 baseline.ubuntu.add_universe_package_source() {
-  local code_name=$(kickstart.codename)
+  local code_name=$(kickstart.os.codename)
   [ -z "$code_name" ] && echo "Couldn't fetch Ubuntu's codename" && exit 1
 
   kickstart.info "Check for presence of universe or add it"
