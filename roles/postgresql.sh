@@ -13,7 +13,7 @@ kickstart.postgresql.install.Ubuntu() {
 
   access_rules='host all all 0.0.0.0/0 md5'
   postgresql_access_file=/etc/postgresql/9.3/main/pg_hba.conf
-  grep -q "$access_rules" $postgresql_access_file || echo "$access_rules" >> $postgresql_access_file
+  kickstart.file.contains $postgresql_access_file "$access_rules" || echo "$access_rules" >> $postgresql_access_file
 
   sed -i "s/^#\?listen_addresses.\+/listen_addresses = '*'/" /etc/postgresql/9.3/main/postgresql.conf
 

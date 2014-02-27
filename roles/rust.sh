@@ -5,7 +5,7 @@ baseline.rust.install.Ubuntu() {
   rust_md5='7f2e19bc5cde47e143b7484ecda0207f'
 
   check_rust_integrity() {
-    [ -f $rust_dest ] && ( md5sum $rust_dest | grep -q $rust_md5 )
+    [ -f $rust_dest ] && ( md5sum $rust_dest | kickstart.stream.contains $rust_md5 )
   }
 
   (
