@@ -31,6 +31,7 @@ kickstart local nodejs
 | ---        | ---                                  | ---          | ---                                       |
 | clojure    | lein latest stable version           | ✓            | includes java role                        |
 | docker     | latest from docker.io                | x            |                                           |
+| dotfiles   |                                      | ✓            |                                           |
 | elixir     | 0.11.2                               | ✓            | includes latest erlang                    |
 | erlang     | latest from erlang-solutions.com     | ✓            |                                           |
 | go         | 1.2.0                                | ✓            |                                           |
@@ -55,6 +56,27 @@ kickstart local nodejs
 | sml        | smlnj 110.76                         | ✓            |                                           |
 | tools      | editors, version control, and others | ✓            |                                           |
 | zeromq     | 4.0.3                                | ✓            |                                           |
+
+
+### Using your own dotfiles
+
+By default the manifest privison my own dotfiles (http://github.com/bltavares/dot-files) when you ask for it. You can change `files/dotfiles.sh` to point to your dotfiles and have it loaded up.
+
+```bash
+baseline up redis dotfiles
+```
+
+There a minor considerations to use your own dotfiles:
+
+* It must be a git repo
+* It must contain an excutable file called install.sh in the root of your repo. It will be called to setup your dotfiles configurations.
+* To make sure it doesn't run everytime you turn your vagrant on, add this to the end of the file:
+
+```bash
+touch $HOME/.baseline_dotfiles
+```
+
+After making sure you have all the requirements in place, change on the file _files/dotfiles.sh_ to point to your repo.
 
 ### About Mac setup
 The environments are basically using the homebrew versions provided.
