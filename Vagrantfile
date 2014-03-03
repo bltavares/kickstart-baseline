@@ -40,7 +40,7 @@ SHELL
   config.vm.provision :shell do |shell|
     shell.inline = <<SHELL
     cd /baseline
-    DEBUG="#{ENV['DEBUG']}" kickstart local #{ENV['baseline_kickstart']}
+    DEBUG="#{ENV['DEBUG']}" kickstart local vagrant #{ENV['baseline_kickstart']}
 SHELL
   end
 end
