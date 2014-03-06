@@ -91,6 +91,16 @@ The environments are basically using the homebrew versions provided.
 
 * vagrant role should be passed before docker to put vagrant user into docker group.
 
+### Extending an already booted Vagrant box
+
+The vagrant role commes with a command to provision more of the supported environment from inside the box.
+Use the `provision` command to do so.
+
+```bash
+vagrant ssh
+vagrant@vagrant $ provision redis lua
+```
+
 ### Example outputs
 
 ```bash
