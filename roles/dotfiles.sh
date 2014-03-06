@@ -1,3 +1,4 @@
+source roles/tools.sh
 kickstart.context dotfiles
 
 source files/dotfiles.sh
