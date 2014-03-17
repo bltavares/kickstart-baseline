@@ -34,7 +34,7 @@ kickstart local nodejs
 | clojure    | lein latest stable version           | ✓            | includes java role                        |
 | docker     | latest from docker.io                | x            |                                           |
 | dotfiles   |                                      | ✓            |                                           |
-| elixir     | 0.11.2                               | ✓            | includes latest erlang                    |
+| elixir     | 0.12.5                               | ✓            | includes latest erlang                    |
 | erlang     | latest from erlang-solutions.com     | ✓            |                                           |
 | go         | 1.2.0                                | ✓            |                                           |
 | gradle     | 1.9                                  | ✓            | Includes java role                        |
