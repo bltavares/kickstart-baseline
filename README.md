@@ -55,6 +55,7 @@ kickstart local nodejs
 | ruby193    | chruby + ruby 1.9.3                  | ✓            |                                           |
 | rust       | 0.8                                  | ✓            |                                           |
 | scala      | 2.10.3 + sbt 0.13.0                  | ✓            | Includes java role                        |
+| smalltalk  | Pharo stable                         | ✓            |                                           |
 | sml        | smlnj 110.76                         | ✓            |                                           |
 | tools      | editors, version control, and others | ✓            |                                           |
 | zeromq     | 4.0.3                                | ✓            |                                           |
