@@ -8,7 +8,7 @@ baseline.java.install.java.Ubuntu() {
 }
 
 baseline.java.install.maven.Ubuntu() {
-  local maven_basename='apache-maven-3.1.1'
+  local maven_basename='apache-maven-3.2.1'
   local maven_url="http://archive.apache.org/dist/maven/binaries/${maven_basename}-bin.tar.gz"
 
   (
@@ -24,7 +24,7 @@ baseline.java.install.maven.Mac() {
 }
 
 baseline.java.install.ant.Ubuntu() {
-  local ant_basename='apache-ant-1.9.3'
+  local ant_basename='apache-ant-1.9.4'
   local ant_url="http://archive.apache.org/dist/ant/binaries/${ant_basename}-bin.tar.gz"
   (
   cd /opt
