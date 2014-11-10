@@ -1,5 +1,5 @@
 ## kickstart-baseline
-Bash installation script for developer environments
+Bash provisioning scripts for developer environments.
 
 This is a rewrite of the Puppet recipes from [vagrant-baseline](https://github.com/bltavares/vagrant-baseline) to be used with [kickstart](https://github.com/bltavares/kickstart).
 It uses some utilities from kickstart, and it is the only requirement that prevents those bash scripts from running standalone on any machine.
@@ -7,6 +7,8 @@ It uses some utilities from kickstart, and it is the only requirement that preve
 On `recipes` you will find scripts that are shared among some different roles, like compiler and libs packages and so on.
 On `roles` you will find the scripts to setup the different environments that baseline provides.
 On `files` is the files that will be copied and modified sometimes on the target.
+
+It integrates with [baseline](https://github.com/bltavares/baseline) for spinning up VM's on any project easily.
 
 ### Requirements
 
@@ -31,7 +33,8 @@ kickstart local nodejs
 | ---        | ---                                  | ---          | ---                                       |
 | clojure    | lein latest stable version           | ✓            | includes java role                        |
 | docker     | latest from docker.io                | x            |                                           |
-| elixir     | 0.11.2                               | ✓            | includes latest erlang                    |
+| dotfiles   |                                      | ✓            |                                           |
+| elixir     | 0.12.5                               | ✓            | includes latest erlang                    |
 | erlang     | latest from erlang-solutions.com     | ✓            |                                           |
 | go         | 1.2.0                                | ✓            |                                           |
 | gradle     | 1.9                                  | ✓            | Includes java role                        |
@@ -52,9 +55,31 @@ kickstart local nodejs
 | ruby193    | chruby + ruby 1.9.3                  | ✓            |                                           |
 | rust       | 0.8                                  | ✓            |                                           |
 | scala      | 2.10.3 + sbt 0.13.0                  | ✓            | Includes java role                        |
+| smalltalk  | Pharo stable                         | ✓            |                                           |
 | sml        | smlnj 110.76                         | ✓            |                                           |
 | tools      | editors, version control, and others | ✓            |                                           |
 | zeromq     | 4.0.3                                | ✓            |                                           |
+
+
+### Using your own dotfiles
+
+By default the manifest privison my own dotfiles (http://github.com/bltavares/dot-files) when you ask for it. You can change `files/dotfiles.sh` to point to your dotfiles and have it loaded up.
+
+```bash
+baseline up redis dotfiles
+```
+
+There a minor considerations to use your own dotfiles:
+
+* It must be a git repo
+* It must contain an excutable file called install.sh in the root of your repo. It will be called to setup your dotfiles configurations.
+* To make sure it doesn't run everytime you provision, add the following line to the end of the file:
+
+```bash
+touch ~/.baseline_dotfiles
+```
+
+After making sure you have all the requirements in place, change on the file _files/dotfiles.sh_ to point to your repo.
 
 ### About Mac setup
 The environments are basically using the homebrew versions provided.
@@ -68,6 +93,16 @@ The environments are basically using the homebrew versions provided.
 ### Caveates
 
 * vagrant role should be passed before docker to put vagrant user into docker group.
+
+### Extending an already booted Vagrant box
+
+The vagrant role commes with a command to provision more of the supported environment from inside the box.
+Use the `provision` command to do so.
+
+```bash
+vagrant ssh
+vagrant@vagrant $ provision redis lua
+```
 
 ### Example outputs
 

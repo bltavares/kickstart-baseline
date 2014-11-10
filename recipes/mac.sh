@@ -14,3 +14,8 @@ kickstart.command_exists brew || baseline.mac.install.homebrew
 kickstart.package.update
 kickstart.package.upgrade
 kickstart.info "brew command outputs will be suppressed. Check \"brew info <package_name>\" for caveats"
+
+baseline.mac.install.homebrew-cask() {
+  kickstart.mute brew tap phinze/cask
+  kickstart.mute brew install brew-cask
+}
